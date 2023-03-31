@@ -1,0 +1,5 @@
+var searchBar = ["foodcategory"]
+var foodList = ["foods"]
+var recipe = ["selection"]
+var map = ["googlemaps"]
+var video = ["YouTube"]
