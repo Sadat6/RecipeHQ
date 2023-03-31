@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    text-align: center;
+    background-color: rgb(63, 146, 63);
+    color: white;
+}
+.searchBar{
+    background-color: aqua;
+}
+
+#inputField{
+    padding: 10px;
+    margin: 20px;
+}
+
+.row{
+    display: flex;
+    
+}
+.cols6{
+    border: 4px solid red; 
+    width: 700px; 
+    height: 400px; 
+    margin: 10px;
+    text-align: center;
+}
+#food-list{
+    height: 600px;
+    margin: auto;
+}
+#recipe{
+    height: 600px;
+    margin: auto;
+}
+#map{
+    margin: 30px auto;
+}
+#video{
+    margin: 30px auto;
+}
