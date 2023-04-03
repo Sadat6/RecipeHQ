@@ -41,3 +41,27 @@ header{
 #video{
     margin: 30px auto;
 }
+
+#dbPictureSlide{
+    width:900PX;
+   /* border: 1px solid rgb(255, 106, 0);*/
+    border-radius: 12px;
+    margin: 150px auto;
+    height: 650px;
+    padding-left:0px;
+    display:block;
+}
+
+
+img.dbPictureSlide{
+    /*width:20%;
+    height:280px;
+    display:inherit;*/
+    position: relative;
+    float: left;
+    width:  100px;
+    height: 500px;
+    background-position:50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
