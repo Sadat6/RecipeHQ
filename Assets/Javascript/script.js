@@ -1,4 +1,17 @@
-var searchBar = ["foodcategory"]
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '53f78cc422c1b36e1de17556596d28a1',
+		'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
+	}
+};
+
+fetch('https://api.edamam.com/api/recipes/v2?type=public&beta=true&q=meat&app_id=b9c6ace0&app_key=53f78cc422c1b36e1de17556596d28a1')
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+    
+var searchValue = ""
 var foodList = ["foods"]
 var recipe = ["selection"]
 var map = ["googlemaps"]
@@ -22,28 +35,5 @@ $(function mainPageSlide () {
     });
 });
 
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '51a8b8f970msh294e2129279c3a5p130ec8jsna317748ab7a8',
-		'X-RapidAPI-Host': 'worldwide-recipes1.p.rapidapi.com'
-	}
-};
 
-fetch('https://worldwide-recipes1.p.rapidapi.com/api/search?q=beef', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
 
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '51a8b8f970msh294e2129279c3a5p130ec8jsna317748ab7a8',
-// 		'X-RapidAPI-Host': 'worldwide-recipes1.p.rapidapi.com'
-// 	}
-// };
-
-// fetch('https://worldwide-recipes1.p.rapidapi.com/api/explore', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
