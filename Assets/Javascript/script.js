@@ -1,23 +1,42 @@
 const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '53f78cc422c1b36e1de17556596d28a1',
-		'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
-	}
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '53f78cc422c1b36e1de17556596d28a1',
+        'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
+    }
 };
 
-fetch('https://api.edamam.com/api/recipes/v2?type=public&beta=true&q=meat&app_id=b9c6ace0&app_key=53f78cc422c1b36e1de17556596d28a1')
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+// var searchValue = ""
+var meatBased = $("#meat-based");
+var vegan = $("#vegan");
+var glutenFree = $("gluten-free");
+
+fetch('https://api.edamam.com/api/recipes/v2?type=public&beta=true&q=searchValue&app_id=b9c6ace0&app_key=53f78cc422c1b36e1de17556596d28a1')
+    // .then(response => response.json())
+    // .then(response => console.log(response))
+    // .catch(err => console.error(err));
+    .then(function(searchValue) {
+        return searchValue.json();
+    })
+    .then(function(searchValue) {
+        console.log(searchValue)
+        meatBased.text(searchValue.recipe)
+        vegan.text(searchValue.recipe)
+        glutenFree.text(searchValue.recipe)
+
+    })
     
-var searchValue = ""
-var foodList = ["foods"]
-var recipe = ["selection"]
-var map = ["googlemaps"]
-var video = ["YouTube"]
 
+var foodList = ["foods"];
+var recipe = ["selection"];
+var video = ["YouTube"];
+var searchBtn = $("#search-btn");
 
+function submission(event) {
+    event.preventDefault()
+
+}
+searchBtn.on("click" , submission)
 
 $(function mainPageSlide () {
 
