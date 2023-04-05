@@ -17,7 +17,8 @@ header{
 }
 #category{
     padding: 20px;
-    width: 20%;
+    width: 80%;
+    margin-left: 5px;
 }
 .btnbtn-primary{
     background-color: #4CAF50; /* Green */
@@ -28,7 +29,10 @@ header{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    width: 200px;
+    width: 19%;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .row{
