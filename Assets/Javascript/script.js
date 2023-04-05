@@ -37,13 +37,13 @@ searchBtn.on('click', function(event){
     $('#mainDiv').css('display','block');
     $('#dbPictureSlide').css('display','none');
 
-    for(var i=0; i < hits.length; i++){
-        var foodListElement = $('<li>');
-        foodListElement.text(hits(i));
-        foodList.append(foodListElement);
-    }
+    // for(var i=0; i < searchValue.hits.length; i++){
+    //     var foodListElement = $('<li>');
+    //     foodListElement.text(searchValue.hits(i));
+    //     foodList.append(foodListElement);
+    // }
 
-    //foodList.text(categorySelectedValue);
+    foodList.text(categorySelectedValue);
 
 });
 
