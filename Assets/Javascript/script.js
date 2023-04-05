@@ -11,7 +11,7 @@ var meatBased = $("#meat-based");
 var vegan = $("#vegan");
 var glutenFree = $("gluten-free");
 
-fetch('https://api.edamam.com/api/recipes/v2?type=public&beta=true&q=searchValue&app_id=b9c6ace0&app_key=53f78cc422c1b36e1de17556596d28a1')
+fetch('https://api.edamam.com/api/recipes/v2?type=public&q=q&app_id=b9c6ace0&app_key=53f78cc422c1b36e1de17556596d28a1%09&health=vegan')
     // .then(response => response.json())
     // .then(response => console.log(response))
     // .catch(err => console.error(err));
