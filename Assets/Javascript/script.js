@@ -29,19 +29,23 @@ searchBtn.on('click', function(event){
         })
         .then(function(searchValue) {
             console.log(searchValue)
-            console.log(searchValue.hits)
+            console.log(searchValue.hits.recipe)
+
+            for(var i=0; i < searchValue.hits.length; i++){
+            var foodListElement = $('<li>');
+            foodListElement.text(searchValue.hits[i]);
+            foodList.append(foodListElement);
+        }
         })
+      
 
     event.preventDefault();
 
     $('#mainDiv').css('display','block');
     $('#dbPictureSlide').css('display','none');
 
-    // for(var i=0; i < searchValue.hits.length; i++){
-    //     var foodListElement = $('<li>');
-    //     foodListElement.text(searchValue.hits(i));
-    //     foodList.append(foodListElement);
-    // }
+    
+
 
     foodList.text(categorySelectedValue);
 
