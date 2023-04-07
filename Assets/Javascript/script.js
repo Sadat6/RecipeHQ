@@ -1,9 +1,10 @@
-
-
-var searchValue = "";
+var searchValue = 1;
 var categorySelectedValue =  "";
 var searchBtn = $("#search-btn");
-var foodList = $('#food-list').children(1)
+var recipeTitle = $("#recipe-card-title");
+var recipeImg = $("#recipe-img");
+var recipeIngredients = $("#recipe-ingredients");
+var recipeInstructions = $("#recipe-instructions");
 
 $('#category').on('change', function () {
     categorySelectedValue=$("#category option:selected").val();
@@ -32,22 +33,29 @@ searchBtn.on('click', function(event){
             console.log(searchValue.hits.recipe)
 
             for(var i=0; i < searchValue.hits.length; i++){
-            var foodListElement = $('<li>');
-            foodListElement.text(searchValue.hits[i]);
-            foodList.append(foodListElement);
+            var recipeTitleElement = $('<li>');
+            recipeTitleElement.text(searchValue.hits[i]);
+            recipeTitleElement.append(recipeTitleElement);
         }
         })
-      
-
-    event.preventDefault();
+     
+        //     event.preventDefault();
+        //     if (recipeTitleElement === "") {
+        //         alert()
+        //     } else {
+        //         recipeTitle(searchValue)
+        //         recipeTitle(searchValue)
+        //     }
+        // })
+    
 
     $('#mainDiv').css('display','block');
     $('#dbPictureSlide').css('display','none');
 
-    
+       recipeTitleElement.text(categorySelectedValue);
 
 
-    foodList.text(categorySelectedValue);
+ 
 
 });
 
