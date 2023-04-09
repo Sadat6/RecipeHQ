@@ -9,12 +9,13 @@ header{
 }
 .searchBar{
     background-color: aqua;
-}
+} 
 
-#inputField{
+ #inputField { 
     padding: 10px;
     margin: 20px;
-}
+} 
+
 #category{
     padding: 20px;
     width: 80%;
@@ -30,10 +31,10 @@ header{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    width: 19%;
+    width: 25%;
     margin-left: 5px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
 }
 
 .row{
@@ -41,7 +42,7 @@ header{
     
 }
 .cols6{
-    border: 4px solid red; 
+    border: 4px solid greenyellow; 
     width: 700px; 
     height: 400px; 
     margin: 10px;
@@ -84,4 +85,9 @@ img.dbPictureSlide{
     background-position:50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
+}
+
+.footer {
+    background-color: greenyellow;
+    font-weight: bolder;
 }
