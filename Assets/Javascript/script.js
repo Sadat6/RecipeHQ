@@ -41,10 +41,12 @@ searchBtn.on('click', function(event){
                 var foodListElement = $('<button>');
                 var foodListBrk = $('<br>');
                 foodListElement.attr('class','food-list-btn');
-                foodListElement.attr('style','margin: 5px;');
+                foodListElement.attr('style','margin: 5px; padding: 5px;');
                 foodListElement.text(data.hits[i].recipe.label);
                 foodList.append(foodListElement);
                 // foodList.append(foodListBrk);
+
+
 
                 $('#recipe').css('display','none')
                 $('#image').css('display','none')
