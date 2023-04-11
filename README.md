@@ -18,7 +18,6 @@ RecipeHQ was created for all new and experienced cooks wanting to try various ty
 - THEN I am presented with the recipe AND the food image
 - THEN I will see a YouTube video on how to prepare the dish
 ```
-## Usage
 
 ## Mockup
 ![](./Assets/Images/mockupv2.png)
@@ -27,3 +26,4 @@ RecipeHQ was created for all new and experienced cooks wanting to try various ty
 https://github.com/Sadat6/RecipeHQ
 
 ## Deployment
+https://sadat6.github.io/RecipeHQ/
