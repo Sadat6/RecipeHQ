@@ -8,8 +8,6 @@ var indexBtnClicked;
 $('#category').on('change', function () {
     categorySelectedValue=$("#category option:selected").val();
 });
-    
- 
 searchBtn.on('click', function(event){
     event.preventDefault();
     const options = {
@@ -19,9 +17,7 @@ searchBtn.on('click', function(event){
             'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
         }
     };
-    
     console.log("This is category selected value: " + categorySelectedValue);
-    
     fetch('https://api.edamam.com/api/recipes/v2?type=public&q=q&app_id=b9c6ace0&app_key=53f78cc422c1b36e1de17556596d28a1%09&health='+ categorySelectedValue)
         .then(function(response) {
             return response.json();
@@ -42,8 +38,7 @@ searchBtn.on('click', function(event){
                 $('#image').css('display','none')
                 $('#video').css('display','none')
                 $('.youtube-video').css('display','none')
-                              
-            }     
+            }
             console.log("Num of food list buttons: " + $(".food-list-btn").length)
             //Food list button click event
             foodList.delegate("button","click", function(event){
@@ -52,13 +47,11 @@ searchBtn.on('click', function(event){
                 $('#image').css('display','block')
                 $('#video').css('display','block')
                 $('.youtube-video').css('display','block')
-            
                 indexBtnClicked = $(this).index();
                 console.log("Button Click Index: "+ indexBtnClicked);
                 //Ingredient List
                 var foodIngredientElement = $('<li>');
                 foodIngredientElement.attr('class','food-ingredients');
-                
                 // call up youtube video
                 videoSearch("AIzaSyBFeYws43rpN5DIOd-G1ECcF1zxSwXR_yU", categorySelectedValue+"_how_to_make");
                 foodIngredientElement.text(data.hits[indexBtnClicked].recipe.ingredientLines);
@@ -80,9 +73,7 @@ searchBtn.on('click', function(event){
                 if(indexBtnClicked > data.hits.length){
                     //indexBtnClicked = ;
                 }
-  
             })
-            
         })
     $('#mainDiv').css('display','block');
     $('#dbPictureSlide').css('display','none');
@@ -90,12 +81,11 @@ searchBtn.on('click', function(event){
 });
 $(function mainPageSlide () {
     $('#mainDiv').css('display','none');
-    
     $("#dbPictureSlide").slidesjs({
         width: 200,
         height: 528,
         navigation: false,
-        play: {    
+        play: {
             interval: 3000,
             auto: true,
             pauseOnHover: true,
@@ -103,7 +93,7 @@ $(function mainPageSlide () {
     });
 });
 function videoSearch(API_KEY, toSearch)
-{    
+{
     // call the youtube api and search for the video given the query
     fetch("https://www.googleapis.com/youtube/v3/search?key="+ API_KEY +"&type=video&part=snippet&q=" + toSearch)
     .then(function(data) {
@@ -114,7 +104,7 @@ function videoSearch(API_KEY, toSearch)
         var videoID = data['items'][0]['id']['videoId'];
         // grab the id from the html
         const iFrameElement = document.querySelector("#iFrameVideo");
-        // plug in the video with the embeded link 
+        // plug in the video with the embeded link
         iFrameElement.src = `http://www.youtube.com/embed/${videoID}`
     })
 }
