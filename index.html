@@ -58,37 +58,35 @@
             <option id="alcohol-free" value="alcohol-free">Alcohol-Free</option>
             <option id="alcohol-cocktail" value="alcohol-cocktail">Alcohol-Cocktail</option>
         </select>
-
+​
         <button id="search-btn" class="btnbtn-primary">Search</button>                
 </div>
-
+​
  <div class="mainDiv" id="mainDiv">
-    <div class="column">
+    <div class="row">
         <div class="cols6" id="food-list" style="border-color:greenyellow">
             <!-- <h2>Food List</h2> -->
         </div>
-
+​
         <div class="cols6" id="recipe">
             <h2>Recipe</h2>
         </div>
-
+​
     </div>
-
+​
     <div class="row">
         <div class="cols6" id="image">
             <h2>Dish Image</h2>
         </div>
-
-        <div class="cols6" id="video">
-            <h2>Search Your Recipe Here</h2>
-            <div class="youtube-videos">
-                <iframe id="iFrameVideo" width="560" height="315" src="http://www.youtube.com/embed/sTdffKZF0qV4VgcVgoOeGvoVzY0" frameborder="0" ></iframe>
-                <iframe width="560" height="315" id="iFrameVideo" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-        </div>    
-
+​
+        <!-- youtube videos JT-->
+        <div class="youtube-video">
+            <h1>How-to Video</h1>
+            <iframe width="560" height="315" id="iFrameVideo" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        </div>
     </div>
 </div>
-
+​
 <div class="dbPictureSlide" id="dbPictureSlide">
     <img src="Assets/Images/Food_1.jpg" width="300" height="350"/>
     <img src="Assets/Images/Food_2.jpg" width="300" height="350"/>
@@ -101,50 +99,7 @@
     <script src="./Assets/Javascript/script.js"></script>
     <script src="./Assets/Javascript/jquery.slides.min.js"></script>
 </div>
-
-<!-- youtube videos -->
-
-    
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-</body>
-
+​
 <footer class="footer">
     <div class="content has-text-centered">
         <p>RecipeHQ made with HTML, CSS, Javascript, and love. </p>
@@ -155,6 +110,6 @@
       </p>
     </div>
   </footer>
-
+​
+</body>
 </html>
-
