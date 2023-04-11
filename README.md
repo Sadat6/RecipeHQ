@@ -21,7 +21,7 @@ RecipeHQ was created for all new and experienced cooks wanting to try various ty
 ## Usage
 
 ## Mockup
-![](./Assets/Images/mockupv1.png)
+![](./Assets/Images/mockupv2.png)
 
 ## GitHub
 https://github.com/Sadat6/RecipeHQ
