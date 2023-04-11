@@ -10,12 +10,12 @@ header{
 .searchBar{
     background-color: aqua;
 } 
-​
+
  #inputField { 
     padding: 10px;
     margin: 20px;
 } 
-​
+
 #category{
     padding: 20px;
     width: 80%;
@@ -36,7 +36,7 @@ header{
     margin-top: 10px;
     margin-bottom: 10px; 
 }
-​
+
 .row{
     display: flex;
     
@@ -62,7 +62,7 @@ header{
 #video{
     margin: 30px auto;
 }
-​
+
 #dbPictureSlide{
     width:900PX;
    /* border: 1px solid rgb(255, 106, 0);*/
@@ -72,8 +72,7 @@ header{
     padding-left:0px;
     display:block;
 }
-​
-​
+
 img.dbPictureSlide{
     /*width:20%;
     height:280px;
@@ -86,7 +85,7 @@ img.dbPictureSlide{
     background-repeat:   no-repeat;
     background-size:     cover;
 }
-​
+
 /* stylyzing the youtube video JS */
 .youtube-video{
     width: 100%;
@@ -94,7 +93,7 @@ img.dbPictureSlide{
     text-align: center;
     display: none;
 }
-​
+
 .footer {
     background-color: greenyellow;
     font-weight: bolder;
