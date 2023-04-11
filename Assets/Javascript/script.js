@@ -126,34 +126,25 @@ $(function mainPageSlide () {
 
 function videoSearch(API_KEY, toSearch)
 {    
-    let iFrameTarget = document.getElementById("iFrameVideo");
-
     // call the youtube api and search for the video given the query
     fetch("https://www.googleapis.com/youtube/v3/search?key="+ API_KEY +"&type=video&part=snippet&q=" + toSearch)
     .then(function(data) {
         return data.json()
     })
     .then(function(data){
-        console.log(data)
 
-        // grab the videos id
-        var videoContainer = document.querySelector(".videos");
+        // grab the video id
+        var videoID = data['items'][0]['id']['videoId'];
 
-        let videos = data.items;
-        for(video of videos){
-            // videoContainer.innerHTML += `
-            // <img src="${vides.snippet.thumbnails.url}">
-            // `
+        // grab the id from the html
+        const iFrameElement = document.querySelector("#iFrameVideo");
 
-            console.log(`${window.location.pathname.split('/')[3]}`);
-
-        }
-
-
+        // plug in the video with the embeded link 
+        iFrameElement.src = `http://www.youtube.com/embed/${videoID}`
     })
 }
 
-videoSearch("AIzaSyAcGfs0ivOla4i7uh_q0nYkcjEgEADgwNA", "indian");
+videoSearch("AIzaSyAcGfs0ivOla4i7uh_q0nYkcjEgEADgwNA", "ethiopian_food");
 
 
 
